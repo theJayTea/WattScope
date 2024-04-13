@@ -120,10 +120,8 @@ include 'connection.php';
           <div class="col-xxl-6 col-xl-7 col-lg-8 col-md-8 col-xs-11 order-2 order-lg-1">
             <div class="welcome-content welcome-content--l3">
               <h1 class="welcome-content--l3__sub-title text-gorse aos-init aos-animate" data-aos="fade-up" data-aos-duration="500" data-aos-once="true">Sign Un Now!</h1>
-              <h1 class="welcome-content--l3__title aos-init aos-animate" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true">The right consultation partner for your business</h1>
-              <p class="welcome-content--l3__descriptions aos-init aos-animate" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500" data-aos-once="true">When, while lovely valley teems with vapour around
-                meand <br class="d-none d-sm-block">
-                        meridian sun strikes the upper impenetroble.</p>
+              <h1 class="welcome-content--l3__title aos-init aos-animate" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true">Welcome to WattScope!</h1>
+              <p class="welcome-content--l3__descriptions aos-init aos-animate" data-aos="fade-up" data-aos-duration="500" data-aos-delay="500" data-aos-once="true">Founded on the principle of environmental responsibility, our team is dedicated to driving change and spreading awareness about the urgent need for clean energy adoption.</p>
             </div>
           </div>
           <!--/ .Welcome Content Area -->

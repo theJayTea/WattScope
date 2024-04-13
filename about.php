@@ -112,9 +112,8 @@ include 'connection.php';
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-xl-7">
-            <h2 class="page-title-content__heading">Career with Fastland</h2>
-            <p class="page-title-content__text">Our focus is always on finding the best people to work with. Our<br class="d-none d-xs-block d-sm-none d-md-block"> bar is
-                        high, but you look ready to take on the challenge. </p>
+            <h2 class="page-title-content__heading" style="margin-top:75px; margin-bottom:75px;">About Us</h2>
+            <p class="page-title-content__text">Learn more about us, how we started, why we started, and how our product works by scrolling below.</p>
           </div>
         </div>
       </div>
@@ -133,19 +132,16 @@ include 'connection.php';
         <div class="row align-items-center justify-content-center">
           <div class="col-xl-6 col-lg-6 col-md-8 col-xs-10 aos-init aos-animate" data-aos="fade-right" data-aos-duration="500" data-aos-once="true">
             <div class="about-us__image">
-              <img class="w-100" src="./image/home-5/about-us-l5-img.png" alt="">
+              <img class="w-100" src="team.jpg" alt="">
               <!-- Video Button -->
             </div>
           </div>
           <div class="col-xxl-5 offset-xxl-1 col-lg-6 col-md-8 col-xs-10 aos-init aos-animate" data-aos="fade-left" data-aos-duration="500" data-aos-once="true">
             <div class="about-us-right mt-4 mt-lg-0">
               <div class="section-title section-title--l5">
-                <h6 class="section-title__sub-heading text-primary">Watch video</h6>
-                <h2 class="section-title__heading mb-4">Consultation Trade<br class="d-none d-xs-block d-lg-none  d-xl-block"> Easier Than Ever
+                <h2 class="section-title__heading mb-4">Who we Are
                 </h2>
-                <p class="section-title__description">Scale up and down easily as your business demands. And make use of
-                  business-grade consultation. Book flexibly by the day, week or longer and customise the layout to reflect
-                  your brand.</p>
+                <p class="section-title__description">'We are team WattScope our goal is to find a solution to SDG 7 and help spread awarness to reduce the amount of fossil fuels burned and help everyone get clean energy'</p>
               </div>
             </div>
           </div>
@@ -160,38 +156,6 @@ include 'connection.php';
 
 
 
-
-    <div class="content-section content-section--l2-2 position-relative bg-default" style="margin-top: 70px;">
-      <div class="container">
-        <div class="content-section--l2-2__wrapper border-top border-default-color">
-          <div class="row align-items-center justify-content-center justify-content-lg-start">
-            <div class="col-xl-7 col-lg-6 col-md-8 col-xs-10">
-              <div class="content-image-group--l2-2">
-                <img class="w-100 aos-init aos-animate" src="./images/homepage/Resources Page.png" style="width:567px; height:500px; object-fit:cover;" alt="" data-aos="fade-right" data-aos-duration="500" data-aos-once="true">
-                <div class="content-image-group--l2-2__img-1">
-                  <img class="w-100 aos-init aos-animate" src="./image/home-2/l2-content-2-shape-2.png" alt="" data-aos="fade-right" data-aos-duration="500" data-aos-once="true" data-aos-delay="300">
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-5 col-lg-6 col-md-8 col-xs-10">
-            <div class="section-title section-title--l9">
-              <!-- <h6 class="section-title__sub-heading text-electric-violet-2" data-aos="fade-up" data-aos-duration="500" data-aos-once="true" style="color: #ff1e38 !important; border: #ff1e38;">Blog</h6> -->
-              <h2 class="section-title__heading aos-init aos-animate" data-aos="fade-left" data-aos-duration="500" data-aos-once="true">Check Out Our Latest Computer Science <br>Resources </h2>
-            </div>
-                
-                
-                <p class="content-texts--l2-1__content aos-init aos-animate" data-aos="fade-left" data-aos-duration="500" data-aos-delay="300" data-aos-once="true">Our Computer Science resources include IA exemplars, Topic-wise Notes and Past Papers, and Official IB Documents. <br><br>You can see resources on other subjects by visiting our resources page.</p>
-                <div class="content-texts--l2-1__button aos-init aos-animate" data-aos="fade-left" data-aos-duration="500" data-aos-delay="500" data-aos-once="true">
-                  <a class="btn-link--2 with--line border--primary" href="">Get Started Now</a>
-                
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="content-section--l2-2__shape-img">
-      </div>
-    </div>
 
 
 
