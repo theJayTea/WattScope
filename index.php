@@ -29,6 +29,13 @@ include 'connection.php';
   <!-- Custom stylesheet -->
 </head>
 
+
+
+<style> p {
+    padding: 10px;
+}</style>
+
+
 <body data-theme-mode-panel-active data-theme="light">
   <div class="site-wrapper overflow-hidden ">
     <!-- Header Area -->
@@ -106,7 +113,7 @@ include 'connection.php';
     <!--/ .Header Area -->
 
 
-    <div class="welcome-area welcome-area--l5 dark-mode-texts position-relative" style="background-image: url(back.jpg);">
+    <div class="welcome-area welcome-area--l5 dark-mode-texts position-relative" style="background-image: url(Untitled.jpeg);">
       <div class="container">
         <div class="row align-items-center justify-content-center justify-content-md-start">
           <!-- Welcome content Area -->
@@ -131,10 +138,7 @@ include 'connection.php';
           <div class="row align-items-center justify-content-center justify-content-lg-start">
             <div class="col-xl-7 col-lg-6 col-md-8 col-xs-10">
               <div class="content-image-group--l2-2">
-                <img class="w-100 aos-init aos-animate" src="./images/homepage/Resources Page.png" style="width:567px; height:500px; object-fit:cover;" alt="" data-aos="fade-right" data-aos-duration="500" data-aos-once="true">
-                <div class="content-image-group--l2-2__img-1">
-                  <img class="w-100 aos-init aos-animate" src="./image/home-2/l2-content-2-shape-2.png" alt="" data-aos="fade-right" data-aos-duration="500" data-aos-once="true" data-aos-delay="300">
-                </div>
+                <img class="w-100 aos-init aos-animate" src="sec.jpg" style="width:567px; height:500px; object-fit:cover;" alt="" data-aos="fade-right" data-aos-duration="500" data-aos-once="true">
               </div>
             </div>
             <div class="col-xl-5 col-lg-6 col-md-8 col-xs-10">
@@ -153,6 +157,185 @@ include 'connection.php';
           </div>
         </div>
       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<?php
+
+if(isset($_SESSION['id'])) {
+    echo '    <div class="testimonial-section testimonial-section--l3 bg-default-3" style="background-color: white; margin-top:-50px; padding-bottom:120px;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-10 col-xl-10 col-xxl-10">
+          <div class="section-title section-title--l3 text-center" style="margin-bottom: -20px;">
+            <h2 class="section-title__heading mb-4 aos-init aos-animate" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true">Your Scanning History</h2>
+          </div>
+        </div>
+      </div>';
+
+      $ID = $_SESSION['id'];
+      $fetch = mysqli_query($conn, "SELECT * FROM aihistory WHERE userid = '$ID' ORDER BY scanid DESC");
+      while($row = mysqli_fetch_assoc($fetch)) {
+        echo "
+        <div class='row justify-content-center testimonial-mobile-slider--l3 aos-init aos-animate' data-aos='fade-up' data-aos-duration='500' data-aos-delay='400' data-aos-once='true'>
+          <div class='col-lg-12 col-md-12'>
+            <div class='card card-testimonial--l3' style='background-color:#f3f4f6;'>
+              <div class='card-body' style='display: flex;'>
+                <p class='card-description' style='color: black;'></p>
+                <div class='col-2'>
+                <h3 class='card-title' style='color: black;'>Appliance</h3>
+                <p class='card-text--ext' style='color: black;'>{$row['Appliance']}</p>
+            </div>
+        
+                        <div class='col-2'>
+                            <h3 class='card-title' style='color: black;'>Power Usage</h3>
+                            <p class='card-text--ext' style='color: black;'>{$row['powerusage']}</p>
+                        </div>
+        
+                        <div class='col-2'>
+                        <h3 class='card-title' style='color: black;'>Cost To Run</h3>
+                        <p class='card-text--ext' style='color: black;'>{$row['Costtorun']}</p>
+                    </div>
+        
+                    <div class='col-3'>
+                    <h3 class='card-title' style='color: black;'>How To Save Energy</h3>
+                    <p class='card-text--ext' style='color: black;'>{$row['Howtosave']}</p>
+                </div>
+        
+                <div class='col-3'>
+                <h3 class='card-title' style='color: black;'>Alternative Appliances</h3>
+                <p class='card-text--ext' style='color: black;'>{$row['Alternatives']}</p>
+            </div>
+              </div>
+            </div>
+          </div>
+        </div>";
+      }
+    }
+    else {
+        echo '<div class="testimonial-section testimonial-section--l3 bg-default-3" style="background-color: white; margin-top:-50px; padding-bottom:120px;">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 col-lg-8 col-xl-9 col-xxl-7">
+              <div class="section-title section-title--l3 text-center" style="margin-bottom: -20px;">
+                <h2 class="section-title__heading mb-4 aos-init aos-animate" data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true">Some Examples of Our Scans</h2>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center testimonial-mobile-slider--l3 aos-init aos-animate" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400" data-aos-once="true">
+          <div class="col-lg-12 col-md-12">
+            <div class="card card-testimonial--l3" style="background-color:#f3f4f6;">
+              <div class="card-body" style="display: flex;">
+                <p class="card-description" style="color: black;"></p>
+                <div class="col-2">
+                <h3 class="card-title" style="color: black;">Appliance</h3>
+                <p class="card-text--ext" style="color: black;">Voltas Inverter Split Air Conditioner (1.5 Ton, 3 Star, 183V)</p>
+            </div>
+        
+                        <div class="col-2">
+                            <h3 class="card-title" style="color: black;">Power Usage</h3>
+                            <p class="card-text--ext" style="color: black;">According to the specifications provided by Voltas for the inverter AC models, a 1.5 ton 3 Star inverter model typically consumes around 980 Watts when active.</p>
+                        </div>
+        
+                        <div class="col-2">
+                        <h3 class="card-title" style="color: black;">Cost To Run</h3>
+                        <p class="card-text--ext" style="color: black;">Assuming the AC runs for 6 hours a day for 4 months during the peak summer period in Bengaluru, at an electricity rate of approximately ₹9 per kWh for domestic consumers, the annual cost would be: 0.98 kW * 6 hours/day * 120 days * ₹9</p>
+                    </div>
+        
+                    <div class="col-3">
+                    <h3 class="card-title" style="color: black;">How To Save Energy</h3>
+                    <p class="card-text--ext" style="color: black;">To save energy while using your AC, you can:
+                        <br>- Utilize the inverter technology by setting a comfortable temperature, as it regulates power consumption based on the set temperature and room temperature.
+                        <br>- Maintain the AC regularly, cleaning or replacing filters to ensure smooth functioning.
+                        <br>- Keep windows and doors closed to prevent the cool air from escaping.
+                        <br>- Use window shades to block direct sunlight and reduce the cooling load on your AC.
+                        <br>- Ensure the room is adequately insulated to prevent loss of cooling.</p>
+                </div>
+        
+                <div class="col-3">
+                <h3 class="card-title" style="color: black;">Alternative Appliances</h3>
+                <p class="card-text--ext" style="color: black;">An alternative option would be to use a 5 Star rated inverter AC, as they are designed to be even more energy-efficient. A 5 Star rated inverter AC can use around 10-15% less energy than a 3 Star rated inverter AC, potentially saving approximately 100-150 Watts per hour depending on usage and operating conditions.</p>
+            </div>
+              </div>
+            </div>
+          </div>
+        </div>';
+    }
+
+
+
+
+
+
+//       $ID = $_SESSION['id'];
+//       $fetch = mysqli_query($conn, "SELECT * FROM aihistory WHERE userid = '$ID' ORDER BY scanid DESC");
+//       while($row = mysqli_fetch_assoc($fetch)) {
+//         echo "
+//         <div class='row justify-content-center testimonial-mobile-slider--l3 aos-init aos-animate' data-aos='fade-up' data-aos-duration='500' data-aos-delay='400' data-aos-once='true'>
+        
+//         <div class='col-2'>
+//         <h3 class='card-title' style='color: black;'>Appliance</h3>
+//         <p class='card-text--ext' style='color: black;'>{$row['Appliance']}</p>
+//     </div>
+
+//                 <div class='col-3'>
+//                     <h3 class='card-title' style='color: black;'>Power Usage</h3>
+//                     <p class='card-text--ext' style='color: black;'>{$row['powerusage']}</p>
+//                 </div>
+
+//                 <div class='col-2'>
+//                 <h3 class='card-title' style='color: black;'>Cost To Run</h3>
+//                 <p class='card-text--ext' style='color: black;'>{$row['Costtorun']}</p>
+//             </div>
+
+//             <div class='col-3'>
+//             <h3 class='card-title' style='color: black;'>How To Save Energy</h3>
+//             <p class='card-text--ext' style='color: black;'>{$row['Howtosave']}</p>
+//         </div>
+
+//         <div class='col-2'>
+//         <h3 class='card-title' style='color: black;'>Alternative Appliances</h3>
+//         <p class='card-text--ext' style='color: black;'>{$row['Alternatives']}</p>
+//     </div>
+
+//         </div>";
+//       }
+// }
+
+?>
+
+
+
+
+
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -180,10 +363,9 @@ include 'connection.php';
             <div class="col-lg-8 col-md-7">
               <div class="footer-menu text-center text-md-end">
                 <ul class="list-unstyled">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Articles</a></li>
-                  <li><a href="#">Resources</a></li>
-                  <li><a href="#">Forum</a></li>
+                  <li><a href="index.php">Home</a></li>
+                  <li><a href="#">Scan A Utility</a></li>
+                  <li><a href="about.php">About</a></li>
                 </ul>
               </div>
             </div>
@@ -192,7 +374,7 @@ include 'connection.php';
         <div class="copyright-block copyright-block--l3">
           <div class="row  text-center align-items-center">
             <div class="col-xs-6 text-sm-start">
-              <p class="copyright-text--l3 ">© 2023 Paradigm Education</p> <span class="copyright-text--l3 ">Disclaimer: Paradigm is not directly affiliated with the International Baccalaureate (IB)</span>
+              <p class="copyright-text--l3 ">© 2023 wattscope</p> <span class="copyright-text--l3 ">
             </div>
             <div class="col-xs-6 text-sm-end">
               <ul class="footer-social-share footer-social-share--rounded">
