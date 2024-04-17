@@ -1,8 +1,8 @@
-# WattScope: Your Personal Power Insight AI
+# WattScope: Your Novel Energy Analysis AI
 
 Energy wastage is a significant issue in today's world, with buildings and their appliances being major contributors. This not only impacts the environment but also leads to high electricity bills.
 
-Our solution, WattScope, is a web application (for mobile and PC) that enables action toward this issue by providing an AI analysis of the energy usage profile of any home appliance in seconds.
+Our solution, WattScope, is a web application (for mobile and PC) that enables action toward this issue by providing an AI analysis of the energy usage profile of any home appliance in seconds. There is no current solution that does this, and WattScope's efficacy surpassed our expectations.
 
 By merely clicking a picture of an appliance (and optionally typing/speaking additional details), users can understand the appliance's power usage and the monetary cost of their usage of that appliance (the AI factors in local electricity slab rates and currencies).
 
